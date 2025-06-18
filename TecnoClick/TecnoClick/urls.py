@@ -15,14 +15,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from TecnoClickApp import views
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home),
-    path('service/', views.servicios),
-    path('store/', views.tienda),
-    path('about/', views.blog),
-    path('contact/', views.contacto),
+    path('', include('TecnoClickApp.urls'))
 ]

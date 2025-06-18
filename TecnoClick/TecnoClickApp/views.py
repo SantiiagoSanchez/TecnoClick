@@ -4,20 +4,20 @@ from django.shortcuts import render, HttpResponse
 
 def home (request):
 
-    return HttpResponse("Inicio")
+    return render(request, "TecnoClickApp/home.html")
 
 def servicios (request):
 
-    return HttpResponse("Servicio")
+    return render(request, "TecnoClickApp/service.html")
 
 def tienda (request):
 
-    return HttpResponse("Tienda")
+    return render(request, "TecnoClickApp/store.html")
 
 def blog (request):
 
-    return HttpResponse("Sobre nosotros")
+    return render(request, "TecnoClickApp/about.html")
 
 def contacto (request):
 
-    return HttpResponse("Contacto")
+    return render(request, "TecnoClickApp/contact.html")
