@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Gestión de Pedidos</title>
+
+    <!-- Bootstrap -->
+    <link href="{% static 'TecnoClickApp/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+    <!-- Font Awesome (para los íconos sociales en el footer) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="{% static 'TecnoClickApp/css/gestion.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="{% url 'Inicio' %}">Gestión de Pedidos</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="{% url 'Inicio' %}">Inicio</a>
+                    </li>
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="{% url 'Servicio' %}">Servicios</a>
+                    </li>
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="{% url 'Tienda' %}">Tienda</a>
+                    </li>
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="{% url 'Contacto' %}">Contacto</a>
+                    </li>
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="{% url 'Blog' %}">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Título principal -->
+    <h1 class="site-heading text-center text-white d-none d-lg-block">
+        <span class="site-heading-lower">Tienda TecnoClick</span>
+    </h1>
+
+
+
+    <!--Contenido cambiante-->
+
+    {% block content %}
+
+    {% endblock %}
+
+    <!-- Footer -->
+    <footer class="footer text-faded text-center py-5">
+        <div class="container">
+            <p class="m-0">
+                <a href="#" class="link">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+                <a href="#" class="link">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+                <a href="#" class="link">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </p>
+            <p class="m-0 mbt">
+                <a href="sample.html" class="link">Política de privacidad</a> ·
+                <a href="sample.html" class="link">Aviso legal</a> ·
+                <a href="sample.html" class="link">Cookies</a>
+            </p>
+            <p class="m-0 mbt1">&copy; Tecno - Click 2025</p>
+        </div>
+    </footer>
+
+    <!-- Scripts Bootstrap -->
+    <script src="{% static 'TecnoClickApp/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'TecnoClickApp/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+
+</html>

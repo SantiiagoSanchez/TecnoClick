@@ -1,0 +1,229 @@
+body {
+  font-family: 'Lora', serif;
+  background: linear-gradient(rgba(20, 35, 55, 0.85), rgba(20, 35, 55, 0.85)), url("../img/bg_main.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+}
+
+p {
+  line-height: 1.75;
+}
+
+.text-faded {
+  color: rgba(230, 230, 230, 0.55);
+}
+
+.site-heading {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+  line-height: 1;
+  font-family: 'Raleway', sans-serif;
+}
+
+.site-heading .site-heading-upper {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #B0C8E2;
+}
+
+.site-heading .site-heading-lower {
+  font-size: 5rem;
+  font-weight: 100;
+  line-height: 4rem;
+  color: #48E;
+}
+
+.page-section {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  background-color: rgba(15, 25, 40, 0.85);
+  padding: 2rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.section-heading {
+  text-transform: uppercase;
+  color: #2E5773;
+}
+
+.section-heading .section-heading-upper {
+  display: block;
+  font-size: 1rem;
+  font-weight: 800;
+  padding-bottom: 0.5rem;
+  color: #48E;
+}
+
+.section-heading .section-heading-lower {
+  display: block;
+  font-size: 3rem;
+  font-weight: 100;
+  color: #48E;
+}
+
+.section-heading .section-heading-under {
+  display: block;
+  font-size: 1rem;
+  text-transform: none;
+  font-weight: 300;
+  margin-top: 0.5rem;
+  color: #B0C8E2;
+}
+
+.bg-faded {
+  background-color: rgba(245, 245, 245, 0.9);
+}
+
+#mainNav {
+  background-color: #152C48;
+  font-family: 'Raleway', sans-serif;
+}
+
+#mainNav .navbar-brand {
+  color: #E8EAF6;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link {
+  color: rgba(232, 234, 246, 0.7);
+  font-weight: 800;
+}
+
+#mainNav .navbar-nav .nav-item.active .nav-link {
+  color: #E8EAF6;
+  text-decoration: underline;
+}
+
+@media (min-width: 992px) {
+  #mainNav .navbar-nav .nav-item .nav-link {
+    font-size: 0.9rem;
+  }
+  #mainNav .navbar-nav .nav-item .nav-link:hover {
+    color: rgba(232, 234, 246, 0.5);
+    text-decoration: underline;
+  }
+  #mainNav .navbar-nav .nav-item.active .nav-link:hover {
+    color: #E8EAF6;
+    text-decoration: underline;
+  }
+}
+
+.btn-xl {
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 1.5rem 2rem;
+  background-color: #2E5773;
+  color: white;
+  border: none;
+}
+
+.btn-xl:hover {
+  background-color: #152C48;
+}
+
+.intro {
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .intro .intro-img {
+    width: 75%;
+    float: left;
+    height: 600px; /* Ajusta según tu diseño */
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  .intro .intro-text {
+    left: 600px;
+    width: 60%;
+    margin-top: 3rem;
+    background-color: rgba(46, 87, 115, 0.95);
+    color: #FFFFFF;
+    position: absolute;
+  }
+
+  .intro .intro-text .intro-button {
+    width: 100%;
+    left: 0;
+    position: absolute;
+    bottom: -2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .intro .intro-text {
+    width: 45%;
+  }
+}
+
+.cta {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #B0C8E2;
+}
+
+.cta .cta-inner {
+  position: relative;
+  padding: 3rem;
+  margin: 0.5rem;
+  background-color: #2E5773;
+  color: white;
+}
+
+.cta .cta-inner:before {
+  border-radius: 0.5rem;
+  content: '';
+  position: absolute;
+  top: -0.5rem;
+  bottom: -0.5rem;
+  left: -0.5rem;
+  right: -0.5rem;
+  border: 0.25rem solid rgba(232, 234, 246, 0.85);
+}
+
+.cta .cta-innerv {
+  position: relative;
+  padding: 3rem;
+  margin: 0.5rem;
+  background-color: rgba(245, 245, 245, 0.95);
+}
+
+.footer {
+  background-color: rgba(20, 35, 55, 0.85);
+  color: #B0C8E2;
+}
+
+.btn {
+  box-shadow: 0px 3px 3px 0px rgba(33, 37, 41, 0.15);
+}
+
+a.link {
+  color: rgba(232, 234, 246, 0.7);
+}
+
+a.link:hover {
+  text-decoration: none;
+  color: rgba(232, 234, 246, 0.5);
+}
+
+.section-content {
+  font-family: 'Lora', serif !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 28px !important;
+  color: #d0d8e6;
+}
+
+ul.errorlist {
+  padding-top: 0.75rem;
+  font-style: italic;
+  color: #ff4c4c;
+}
+

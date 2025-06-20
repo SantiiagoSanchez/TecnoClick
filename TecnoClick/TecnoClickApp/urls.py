@@ -3,9 +3,9 @@ from TecnoClickApp import views
 
 
 urlpatterns = [
-    path('', views.home),
-    path('service/', views.servicios),
-    path('store/', views.tienda),
-    path('about/', views.blog),
-    path('contact/', views.contacto),
+    path('', views.home, name="Inicio"),
+    path('service/', views.servicios, name="Servicio"),
+    path('store/', views.tienda, name="Tienda"),
+    path('about/', views.blog, name="Blog"),
+    path('contact/', views.contacto, name="Contacto"),
 ]
