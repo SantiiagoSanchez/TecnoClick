@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Gestión de Pedidos</title>
+    <title>Tienda Online | TecnoClick</title>
 
     <!-- Bootstrap -->
     <link href="{% static 'TecnoClickApp/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -35,19 +35,19 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item active px-lg-4">
+                    <li class="nav-item {% if request.path == '/' %}active{% endif %} px-lg-4">
                         <a class="nav-link text-uppercase text-expanded" href="{% url 'Inicio' %}">Inicio</a>
                     </li>
-                    <li class="nav-item px-lg-4">
+                    <li class="nav-item {% if request.path == '/service/' %}active{% endif %} px-lg-4">
                         <a class="nav-link text-uppercase text-expanded" href="{% url 'Servicio' %}">Servicios</a>
                     </li>
-                    <li class="nav-item px-lg-4">
+                    <li class="nav-item {% if request.path == '/store/' %}active{% endif %} px-lg-4">
                         <a class="nav-link text-uppercase text-expanded" href="{% url 'Tienda' %}">Tienda</a>
                     </li>
-                    <li class="nav-item px-lg-4">
+                    <li class="nav-item {% if request.path == '/contact/' %}active{% endif %} px-lg-4">
                         <a class="nav-link text-uppercase text-expanded" href="{% url 'Contacto' %}">Contacto</a>
                     </li>
-                    <li class="nav-item px-lg-4">
+                    <li class="nav-item {% if request.path == '/about/' %}active{% endif %} px-lg-4">
                         <a class="nav-link text-uppercase text-expanded" href="{% url 'Blog' %}">Blog</a>
                     </li>
                 </ul>
