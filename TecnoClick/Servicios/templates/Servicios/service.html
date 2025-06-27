@@ -4,14 +4,20 @@
 
 {% block content %}
 
-    {% for servicio in servicios %}
-
-        <div class="service-container">
-            <h2 style="color: #fff;">{{servicio.Titulo}}</h2>
-            <p style="color: #fff;">{{servicio.Contenido}}</p>
-            <p><img src="{{servicio.Imagen.url}}"></p>
-        </div>
-    
+<div class="container page-section">
+    <div class="row">
+        {% for servicio in servicios %}
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 bg-dark text-white border-light">
+                    <img src="{{ servicio.Imagen.url }}" class="card-img-top" alt="{{ servicio.Titulo }}">
+                    <div class="card-body">
+                        <h5 class="card-title text-info">{{ servicio.Titulo }}</h5>
+                        <p class="card-text">{{ servicio.Contenido }}</p>
+                    </div>
+                </div>
+            </div>
         {% endfor %}
+    </div>
+</div>
 
 {% endblock %}
