@@ -10,9 +10,7 @@ def tienda (request):
 
     return render(request, "TecnoClickApp/store.html")
 
-def blog (request):
 
-    return render(request, "TecnoClickApp/about.html")
 
 def contacto (request):
 

@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<div class="container page-section">
+<!-- <div class="container page-section">
     <div class="row">
         {% for servicio in servicios %}
             <div class="col-md-6 col-lg-4 mb-4">
@@ -13,6 +13,26 @@
                     <div class="card-body">
                         <h5 class="card-title text-info">{{ servicio.Titulo }}</h5>
                         <p class="card-text">{{ servicio.Contenido }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div> -->
+
+<div class="container page-section">
+    <div class="row">
+        {% for servicio in servicios %}
+            <div class="col-12 mb-3">
+                <div class="card flex-row shadow-sm border-0" style="height: 160px; max-height: 160px; overflow: hidden;">
+                    {% if servicio.Imagen %}
+                        <div style="width: 180px; height: 100%;">
+                            <img src="{{ servicio.Imagen.url }}" class="h-100 w-100 object-fit-cover rounded-start" alt="{{ servicio.Titulo }}" style="object-fit: cover;">
+                        </div>
+                    {% endif %}
+                    <div class="card-body bg-white d-flex flex-column justify-content-center">
+                        <h5 class="card-title text-primary mb-1">{{ servicio.Titulo }}</h5>
+                        <p class="card-text text-secondary small mb-0">{{ servicio.Contenido }}</p>
                     </div>
                 </div>
             </div>
