@@ -4,38 +4,6 @@
 
 {% block content %}
 
-<!-- <div class="container page-section">
-    <div class="row">
-        {% for post in posteos %}
-            <div class="col-md-12 col-lg-6 mb-4">
-                <div class="card flex-row h-100 shadow-sm border-0" style="min-height: 180px;">
-                    {% if post.Imagen %}
-                        <div class="col-md-5">
-                            <img src="{{ post.Imagen.url }}" class="img-fluid h-100 w-100 object-fit-cover rounded-start" alt="{{ post.Titulo }}" style="object-fit: cover;">
-                        </div>
-                    {% endif %}
-                    <div class="card-body bg-white d-flex flex-column justify-content-between">
-                        <div>
-                            <h5 class="card-title text-primary mb-1">{{ post.Titulo }}</h5>
-                            <p class="card-text text-secondary small mb-2">{{ post.Contenido }}</p>
-                        </div>
-                        <div>
-                            {% for categoria in post.Categorias.all %}
-                                <span class="badge rounded-pill text-primary border border-primary bg-light">
-                                    {{ categoria.Nombre }}
-                                </span>
-                            {% endfor %}
-                        </div>
-                        <div style="text-align: left;">
-                            Autor: {{post.Autor}}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        {% endfor %}
-    </div>
-</div> -->
-
 <div class="container page-section">
     <div class="row">
         {% for post in posteos %}
