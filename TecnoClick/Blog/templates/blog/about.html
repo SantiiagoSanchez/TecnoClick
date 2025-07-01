@@ -74,7 +74,7 @@
 
             {% for categoria in post.Categorias.all %}
 
-                {{categoria.Nombre}}
+                <a href="{% url 'Categoria' categoria.id %}" class="link-categoria">{{categoria.Nombre}}</a>
 
             {% endfor %}
 

@@ -227,3 +227,12 @@ ul.errorlist {
   color: #ff4c4c;
 }
 
+.link-categoria{
+  text-decoration: none;
+  color: #fff;
+}
+
+.link-categoria:hover{
+  text-decoration: underline;
+  color: #fff;
+}
