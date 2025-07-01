@@ -1,0 +1,10 @@
+# Establece LF como fin de línea para todo texto
+* text=auto eol=lf
+
+# Fuerza LF para estos tipos comunes de archivos
+*.py text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.md text eol=lf
