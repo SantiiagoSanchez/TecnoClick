@@ -12,6 +12,3 @@ def tienda (request):
 
 
 
-def contacto (request):
-
-    return render(request, "TecnoClickApp/contact.html")

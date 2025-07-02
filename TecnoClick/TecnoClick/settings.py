@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'TecnoClickApp',
     'Servicios',
     'Blog',
+    'Contacto',
 ]
 
 MIDDLEWARE = [
