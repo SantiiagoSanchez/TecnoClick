@@ -5,6 +5,11 @@
 {% block content %}
 
 <div class="form-container">
+
+    {% if "valido" in request.GET %}
+        <p style="color: #FFF;">Gracias. La informacion se envio correctamente</p>
+
+    {% endif %}
     <form action="" method="POST">
         {% csrf_token %}
         <table class="form-table">
@@ -13,5 +18,4 @@
         <input type="submit" value="Enviar" class="submit-button">
     </form>
 </div>
-
 {% endblock %}
