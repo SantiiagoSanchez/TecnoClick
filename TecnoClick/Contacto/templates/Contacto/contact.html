@@ -4,18 +4,29 @@
 
 {% block content %}
 
+<div style="text-align: center;">
+    <p style="text-transform: uppercase; font-size: 12px; color: #b0c4de; margin-bottom: 5px;">Contacto</p>
+    <h1 style="font-size: 28px; font-weight: bold; color: #FFF;">¿Tienes alguna pregunta?</h1>
+    <p style="color: #FFF;">Estamos aquí para ayudarte. Envíanos un mensaje y te responderemos lo antes posible.</p>
+</div>
+
 <div class="form-container">
+    <div class="form-left">
+        <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Sobre">
+    </div>
 
-    {% if "valido" in request.GET %}
-        <p style="color: #48E;">Gracias. La informacion se envio correctamente</p>
-
-    {% endif %}
-    <form action="" method="POST">
+    <form method="POST">
         {% csrf_token %}
+        
+        {% if "valido" in request.GET %}
+            <p style="color: green;">Gracias. La información se envió correctamente.</p>
+        {% endif %}
+
         <table class="form-table">
             {{ miFormulario.as_table }}
         </table>
-        <input type="submit" value="Enviar" class="submit-button">
+        
+        <input type="submit" value="Enviar Mensaje" class="submit-button">
     </form>
 </div>
 {% endblock %}
