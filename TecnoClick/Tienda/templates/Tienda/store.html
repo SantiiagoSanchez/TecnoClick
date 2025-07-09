@@ -4,8 +4,28 @@
 
 {% block content %}
 
-<div>
-    <p style="color: red;">ESTA PAGINA ESTA FUNCIONANDO</p>
+<div style="text-align: center;">
+    <p style="text-transform: uppercase; font-size: 12px; color: #b0c4de; margin-bottom: 5px;">Nuestra Tienda</p>
+    <h1 style="font-size: 28px; font-weight: bold; color: #FFF;">Descubrí nuestra seleccion de productos tecnologicos de ultima generacion</h1>
 </div>
 
+<div class="container py-4">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+        {% for producto in productos %}
+        <div class="col d-flex align-items-stretch">
+            <div class="card text-center shadow-sm w-100" style="border-radius: 15px;">
+                <div style="width: 100%; height: 150px; display: flex; align-items: center; justify-content: center; background-color: #f8f9fa; border-top-left-radius: 15px; border-top-right-radius: 15px;">
+                    <img src="{{ producto.Imagen.url }}" alt="{{ producto.Nombre }}"
+                        style="max-width: 70px; max-height: 70px; object-fit: contain;">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h6 class="card-title">{{ producto.Nombre }}</h6>
+                    <p class="card-text text-primary fw-bold">€{{ producto.Precio }}</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm mt-auto">Agregar</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}
