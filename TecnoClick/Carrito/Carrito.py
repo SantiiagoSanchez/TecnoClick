@@ -1,12 +1,11 @@
 class Carrito:
     def __init__(self, request):
         self.request = request
-        self.sesion = request.sesion
-        carrito=self.sesion.get("Carrito")
+        self.session = request.session
+        carrito=self.session.get("Carrito")
         if not carrito:
-            carrito=self.sesion["Carrito"]={}
-        else:
-            self.carrito = carrito
+            carrito=self.session["Carrito"]={}
+        self.carrito = carrito
 
     def addProducto(self, producto):
         if(str(producto.id) not in self.carrito.keys()):  #Si no esta en el carrito, lo va a añadir
@@ -26,8 +25,8 @@ class Carrito:
         self.saveCarrito()
 
     def saveCarrito(self):
-        self.sesion["Carrito"]=self.carrito
-        self.sesion.modified = True
+        self.session["Carrito"]=self.carrito
+        self.session.modified = True
 
     def deleteProducto(self, producto):
         producto.id = str(producto.id)
@@ -46,5 +45,5 @@ class Carrito:
         self.saveCarrito()
     
     def limpiarCarrito(self):
-        self.sesion["Carrito"]={}
-        self.sesion.modified = True
+        self.session["Carrito"]={}
+        self.session.modified = True

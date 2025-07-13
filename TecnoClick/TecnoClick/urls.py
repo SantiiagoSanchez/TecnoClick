@@ -23,5 +23,6 @@ urlpatterns = [
     path('about/', include('Blog.urls')),
     path('contact/', include('Contacto.urls')),
     path('store/', include('Tienda.urls')),
+    path('Carrito/', include('Carrito.urls')),
     path('', include('TecnoClickApp.urls')),
 ]
