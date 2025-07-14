@@ -3,35 +3,35 @@ from .Carrito import Carrito
 from Tienda.models import Producto
 # Create your views here.
 
-def post_producto(request, idProd):
+def post_producto(request, producto_id):
 
     carro = Carrito(request)
 
-    producto = Producto.objects.get(id=idProd)
+    producto = Producto.objects.get(id=producto_id)
 
     carro.addProducto(producto)
 
-    return redirect("store")
+    return redirect("Tienda")
 
-def delete_producto(request, idProd):
+def delete_producto(request, producto_id):
 
     carro = Carrito(request)
 
-    producto = Producto.objects.get(id=idProd)
+    producto = Producto.objects.get(id=producto_id)
 
     carro.delete_producto(producto)
 
-    return redirect("store")
+    return redirect("Tienda")
 
-def restar_producto(request, idProd):
+def restar_producto(request, producto_id):
 
     carro = Carrito(request)
 
-    producto = Producto.objects.get(id=idProd)
+    producto = Producto.objects.get(id=producto_id)
 
     carro.restarProducto(producto)
 
-    return redirect("store")
+    return redirect("Tienda")
 
 def limpiar_carro(request):
 
@@ -39,4 +39,4 @@ def limpiar_carro(request):
 
     carro.limpiarCarrito()
 
-    return redirect("store")
+    return redirect("Tienda")

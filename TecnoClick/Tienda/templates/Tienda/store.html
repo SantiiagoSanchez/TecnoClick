@@ -10,7 +10,6 @@
 </div>
 
 <div style="float: right;">
-    <p style="color: #FFF;">Total: {{importe_total_carro}}</p>
     {% include "Carro/widget.html" %}
 </div>
 
@@ -26,7 +25,7 @@
                 <div class="card-body d-flex flex-column">
                     <h6 class="card-title">{{ producto.Nombre }}</h6>
                     <p class="card-text text-primary fw-bold">€{{ producto.Precio }}</p>
-                    <a href="#" class="btn btn-outline-primary btn-sm mt-auto">Agregar</a>
+                    <a href="{% url 'Carrito:agregar' producto.id %}" class="btn btn-outline-primary btn-sm mt-auto">Agregar</a>
                 </div>
             </div>
         </div>

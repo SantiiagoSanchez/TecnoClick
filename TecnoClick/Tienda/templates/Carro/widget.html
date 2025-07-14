@@ -14,12 +14,16 @@
     <tbody>
         {% if request.session.Carrito.items %}
             {% for key, value in request.session.Carrito.items %}
-
-                <td>{{value.Nombre}}</td>
-                <td>{{value.Cantidad}}</td>
-                <td>{{value.Precio}}</td>
+            <tr>
+                <td>{{ value.Nombre }}</td>
+                <td>{{ value.Cantidad }}</td>
+                <td>
+                    <a href="{% url 'Carrito:agregar' value.producto_id %}" class="btn btn-sm btn-success">+</a>
+                    <a href="{% url 'Carrito:restar' value.producto_id %}" class="btn btn-sm btn-secondary">-</a><br>
+                    {{ value.Precio }}
+                </td>
+            </tr>
             {% endfor %}
-
         {% else %}
             <tr>
                 <td colspan="3">
@@ -31,4 +35,12 @@
         {% endif %}
         
     </tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="3">
+                Total: {{importe_total_carro}}
+            </td>
+        </tr>
+    </tfoot>
 </table>
