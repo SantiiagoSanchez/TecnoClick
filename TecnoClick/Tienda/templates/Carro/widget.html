@@ -1,45 +1,47 @@
-<table class="table table-bordered" style="color: #FFF;">
-    <thead>
+<table class="table table-bordered table-dark table-hover rounded shadow-sm">
+    <thead class="thead-dark text-center">
         <tr>
-            <th colspan="3" class="text-align: center">
-                Carro de compras
+            <th colspan="3" class="text-center fs-4">
+                🛒 Carro de Compras
             </th>
         </tr>
         <tr>
-            <th>Producto</th>
-            <th>Cantidad</th>
-            <th>Suma</th>
+            <th class="text-uppercase">Producto</th>
+            <th class="text-uppercase">Cantidad</th>
+            <th class="text-uppercase">Acciones / Suma</th>
         </tr>
     </thead>
     <tbody>
         {% if request.session.Carrito.items %}
             {% for key, value in request.session.Carrito.items %}
             <tr>
-                <td>{{ value.Nombre }}</td>
-                <td>{{ value.Cantidad }}</td>
-                <td>
-                    <a href="{% url 'Carrito:agregar' value.producto_id %}" class="btn btn-sm btn-success">+</a>
-                    <a href="{% url 'Carrito:restar' value.producto_id %}" class="btn btn-sm btn-secondary">-</a><br>
-                    {{ value.Precio }}
+                <td class="align-middle">{{ value.Nombre }}</td>
+                <td class="align-middle">{{ value.Cantidad }}</td>
+                <td class="align-middle">
+                    <div class="d-flex gap-2 justify-content-center mb-1">
+                        <a href="{% url 'Carrito:agregar' value.producto_id %}" class="btn btn-sm btn-success" title="Agregar uno">+</a>
+                        <a href="{% url 'Carrito:restar' value.producto_id %}" class="btn btn-sm btn-secondary" title="Restar uno">-</a>
+                    </div>
+                    <div class="text-center">
+                        ${{ value.Precio }}
+                    </div>
                 </td>
             </tr>
             {% endfor %}
         {% else %}
             <tr>
                 <td colspan="3">
-                    <div class="alert alert-danger text-center">
-                        Sin productos
+                    <div class="alert alert-danger text-center mb-0">
+                        🚫 Sin productos en el carrito
                     </div>
                 </td>
             </tr>
         {% endif %}
-        
     </tbody>
-
     <tfoot>
-        <tr>
-            <td colspan="3">
-                Total: {{importe_total_carro}}
+        <tr class="bg-secondary text-white">
+            <td colspan="3" class="text-end fw-bold">
+                Total: ${{ importe_total_carro }}
             </td>
         </tr>
     </tfoot>
