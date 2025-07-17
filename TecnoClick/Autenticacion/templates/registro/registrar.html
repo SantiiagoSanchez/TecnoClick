@@ -4,6 +4,12 @@
 
 {% block content %}
 
-<p style="color: turquoise;">ESTO ES EL FORMULARIO DE REGISTRO</p>
+<form method="POST" action="" style="color: aquamarine;">
 
+    {% csrf_token %}
+
+    {{Form}}
+
+    <button type="submit" class="btn btn-success">Registrar</button>
+</form>
 {% endblock %}
