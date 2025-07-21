@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'Tienda',
     'Carrito',
     'Autenticacion',
+    'crispy_forms',
+    'crispy_bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -134,6 +136,9 @@ EMAIL_USE_TLS=True
 EMAIL_PORT=587
 EMAIL_HOST_USER = EMAIL_HOST_USERR
 EMAIL_HOST_PASSWORD = PASSWORD_USERR
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+CRISPY_ALLOWED_TEMPLATE_PACK = "bootstrap5"
 
 
 # Default primary key field type
