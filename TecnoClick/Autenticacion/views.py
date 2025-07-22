@@ -1,6 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import View
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import login
+from django.contrib import messages
 # Create your views here.
 
 class VRegistro (View):
@@ -10,4 +12,22 @@ class VRegistro (View):
         return render(request, "registro/registrar.html", {'Form': form})
 
     def post(self, request):
-        pass
+        form = UserCreationForm(request.POST)
+
+        if form.is_valid():
+
+            usuario = form.save()
+
+            login(request, usuario)
+
+            return redirect("Inicio")
+        else:
+            for msg in form.error_messages:
+                messages.error(request, form.error_messages[msg])
+            
+            return render(request, "registro/registrar.html", {'Form': form})
+
+
+
+
+
