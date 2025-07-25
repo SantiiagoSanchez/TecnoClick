@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 from .secretos import EMAIL_HOST_USERR, PASSWORD_USERR
+from django.contrib.messages import constants as mensajes_error
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -139,6 +140,14 @@ EMAIL_HOST_PASSWORD = PASSWORD_USERR
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 CRISPY_ALLOWED_TEMPLATE_PACK = "bootstrap5"
+
+MESSAGES_TAGS = {
+    mensajes_error.DEBUG: 'debug',
+    mensajes_error.ERROR: 'danger',
+    mensajes_error.INFO: 'info',
+    mensajes_error.SUCCESS: 'success',
+    mensajes_error.WARNING: 'warning',
+}
 
 
 # Default primary key field type
