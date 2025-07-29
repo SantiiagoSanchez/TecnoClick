@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'Tienda',
     'Carrito',
     'Autenticacion',
+    'Pedidos',
     'crispy_forms',
     'crispy_bootstrap5',
 ]
