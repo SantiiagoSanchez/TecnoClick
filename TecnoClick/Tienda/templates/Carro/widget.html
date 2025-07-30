@@ -44,5 +44,12 @@
                 Total: ${{ importe_total_carro }}
             </td>
         </tr>
+        {% if request.session.Carrito.items %}
+        <tr>
+            <td colspan="3" style="text-align: center;">
+                <a href="" class="btn btn-primary">Pedir</a>
+            </td>
+        </tr>
+        {% endif %}
     </tfoot>
 </table>

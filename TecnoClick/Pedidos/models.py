@@ -4,7 +4,7 @@ from Tienda.models import Producto
 from django.db.models import F, Sum, FloatField
 # Create your models here.
 
-User = get_user_model #Esto nos devuelve el usuario logueado
+User = get_user_model() #Esto nos devuelve el usuario logueado
 
 class Pedido(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
