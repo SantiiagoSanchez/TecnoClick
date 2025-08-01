@@ -47,7 +47,7 @@
         {% if request.session.Carrito.items %}
         <tr>
             <td colspan="3" style="text-align: center;">
-                <a href="" class="btn btn-primary">Pedir</a>
+                <a href="{% url 'ProcesarPedido' %}" class="btn btn-primary">Pedir</a>
             </td>
         </tr>
         {% endif %}

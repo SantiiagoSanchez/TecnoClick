@@ -25,5 +25,6 @@ urlpatterns = [
     path('store/', include('Tienda.urls')),
     path('Carrito/', include('Carrito.urls')),
     path('Autenticacion/', include('Autenticacion.urls')),
+    path('Pedidos/', include('Pedidos.urls')),
     path('', include('TecnoClickApp.urls')),
 ]

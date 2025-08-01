@@ -55,15 +55,26 @@
         </div>
     </nav>
 
-    <div style="text-align: right; margin-right: 100px; color: white;">
+<div style="text-align: right; margin-right: 100px; color: white;">
 
-        {%if user.is_authenticated %}
-            Bienvenido {{user.username}}!&nbsp;&nbsp;<a href="{% url 'cerrarsesion' %}" class="btn btn-secondary">Cerrar sesión</a>
-        {% else %}
-            <a href="{% url 'logear' %}" style="color: white;">Login</a> &nbsp; &nbsp; <a href="{% url 'Autenticacion' %}" style="color: white;">Registrate</a> 
-        {% endif %}
+  {% if user.is_authenticated %}
+    <div class="d-inline-flex flex-column align-items-center" style="color: white;">
+      <!-- Icono de perfil -->
+      <i class="fa fa-user-circle-o"></i>
 
+      <!-- Nombre de usuario -->
+      <div style="font-weight: bold;">{{ user.username }}</div>
+
+      <!-- Botón cerrar sesión en rojo -->
+      <a href="{% url 'cerrarsesion' %}" class="btn btn-sm btn-danger mt-2">Cerrar sesión</a>
     </div>
+
+  {% else %}
+    <a href="{% url 'logear' %}" style="color: white; margin-right: 10px;">Login</a>
+    <a href="{% url 'Autenticacion' %}" style="color: white;">Registrate</a>
+  {% endif %}
+
+</div>
 
 
     <!-- Título principal -->

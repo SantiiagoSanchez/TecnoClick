@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
-from .secretos import EMAIL_HOST_USERR, PASSWORD_USERR
+from .secretos import EMAIL_HOST_USER as MAIL_USER, PASSWORD_USER as MAIL_PASS
 from django.contrib.messages import constants as mensajes_error
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -136,8 +136,8 @@ EMAIL_BACKEND="django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST="smtp.gmail.com"
 EMAIL_USE_TLS=True
 EMAIL_PORT=587
-EMAIL_HOST_USER = EMAIL_HOST_USERR
-EMAIL_HOST_PASSWORD = PASSWORD_USERR
+EMAIL_HOST_USER = MAIL_USER
+EMAIL_HOST_PASSWORD = MAIL_PASS
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 CRISPY_ALLOWED_TEMPLATE_PACK = "bootstrap5"
